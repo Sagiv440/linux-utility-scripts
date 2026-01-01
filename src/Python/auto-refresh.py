@@ -1,3 +1,10 @@
+# Auto Refresh refesh the currently open webpage per given amount of time by pressing F5 
+# Usage:
+#   python ./auto-refresh.py <time per refresh in minutes>
+# 
+# libraries Require: 
+#   pip install pyautogui
+
 import pyautogui
 import msvcrt
 import time
@@ -30,8 +37,6 @@ def refresh_chrome(tm):
                     print("- Refrach Count: ",cycales)                    
                     print("- Time To Next Refrach: ",print_time(timeout -(time.time()-start)))
                     print("- Total Run Time: ",print_time(time.time()-startTime))
-
-                    #print("- Total Run Time: ",f"{int((t:=time.time()-startTime)//86400)}d {int(t%86400//3600)}h {int(t%3600//60)}m {t%60:.2f}s")
                     
             time.sleep(0.05)
             
